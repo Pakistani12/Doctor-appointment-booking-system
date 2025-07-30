@@ -1,5 +1,5 @@
 # Hospital Chatbot with RAG + Agent (LangGraph + LangChain + FastAPI)
-Medical Chatbot (LangChain + LangGraph + FastAPI) for Doctor appointment booking
+A real-world healthcare chatbot that combines Retrieval-Augmented Generation (RAG), LangGraph agents, FastAPI, MySQL, Twilio (for SMS), and a Streamlit UI.
 ## **Features**
 - Medical questions (via RAG over WHO PDFs)
 - Appointment booking (Agent with calendar + Twilio SMS)
@@ -21,16 +21,23 @@ pip install -r requirements.txt
 
 ## **Project Structure**
 ```"plaintext"
-hospital_medical_chatbot/
-├── main.py                ← FastAPI app (chatbot backend)
-├── agent_graph.py         ← LangGraph workflow (RAG + booking agent)
-├── tools.py               ← Doctor finder, booking, Twilio SMS
-├── rag.py                 ← Load & retrieve from WHO docs (PDF)
-├── data/
-│   └── WHO_Clinical_Guidelines.pdf ← Medical doc for RAG
-├── .env                   ← API keys (OpenAI, Twilio)
-├── requirements.txt
-└── README.md              ← Documentation
+medical_rag_agent_app/
+├── agents/
+│   ├── medical_agent.py
+│   └── langgraph_flow.py
+├── rag/
+│   ├── rag_pipeline.py
+│   ├── documents/
+│   │   └── medical_docs.pdf
+│   └── vectorstore/
+├── db/
+│   └── mysql_connection.py
+├── api/
+│   └── main.py
+├── ui/
+│   └── streamlit_ui.py
+├── .env
+└── requirements.txt
 ```
 ## **License**
 

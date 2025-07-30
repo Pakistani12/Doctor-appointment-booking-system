@@ -1,0 +1,9 @@
+langchain
+langgraph
+mysql-connector-python
+python-dotenv
+streamlit
+fastapi
+uvicorn
+twilio
+PyPDF2

@@ -32,6 +32,8 @@ hospital_medical_chatbot/
 ├── requirements.txt
 └── README.md              ← Documentation
 ```
+## **License**
 
+This project is licensed under the MIT License.
 
 
